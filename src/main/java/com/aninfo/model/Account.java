@@ -1,6 +1,7 @@
 package com.aninfo.model;
 
 import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
 public class Account {
@@ -8,11 +9,9 @@ public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long cbu;
-
     private Double balance;
 
-    public Account(){
-    }
+    public Account(){ }
 
     public Account(Double balance) {
         this.balance = balance;
